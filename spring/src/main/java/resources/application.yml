@@ -1,0 +1,9 @@
+mongodb:
+  primary:
+    host: localhost
+    port: 27017
+    database: dbMaisVida
+  secondary:
+    host: localhost
+    port: 27017
+    database: logMaisVida
