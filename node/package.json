@@ -1,0 +1,14 @@
+{
+  "name": "node-prova",
+  "version": "1.0.0",
+  "description": "Projeto de prova node",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodejs app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "author": "Erik Paixão erikpaixao18@gmail.com",
+  "license": "ISC"
+}

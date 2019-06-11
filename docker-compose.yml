@@ -1,0 +1,12 @@
+version: "3"
+services:
+  node:
+    build: ./node
+    ports:
+      - "3000:3000"
+  spring:
+    build: ./spring
+    ports:
+      - "8080:8080"
+  mongo:
+    image: "mongo"
