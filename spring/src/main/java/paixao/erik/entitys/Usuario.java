@@ -39,5 +39,5 @@ public class Usuario {
 
     @LastModifiedDate
     private Date modified;
-    
+
 }
