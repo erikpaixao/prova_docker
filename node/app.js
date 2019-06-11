@@ -1,37 +1,28 @@
 var express = require("express")
 var app = express()
-var router = express.Router()
 
-const PORT = 8080
-const HOST = "0.0.0.0"
+const bodyParser = require("body-parser")
+const agencia = require("./routes/agencia.route")
 
-router.use(function(req, res, next) {
-  console.log("/" + req.method)
-  next()
-})
+const PORT = 3000
 
-router.get("/", function(req, res) {
-  res.sendFile(path + "index.html")
-})
+const mongoose = require("mongoose")
+const DB_URL = "mongodb://localhost:27017/prova"
+const mongoDB = process.env.MONGODB_URI || DB_URL
 
-router.get("/:id", function(req, res) {
-  res.sendFile(path + "sharks.html")
-})
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
-router.post("/", function(req, res) {
-  res.sendFile(path + "sharks.html")
-})
+app.use("/", agencia)
 
-router.put("/:id", function(req, res) {
-  res.sendFile(path + "sharks.html")
-})
+mongoose.connect(mongoDB)
 
-router.delete("/:id", function(req, res) {
-  res.sendFile(path + "sharks.html")
-})
+mongoose.Promise = global.Promise
 
-app.use("/", router)
+let db = mongoose.connection
 
-app.listen(3000, function() {
+db.on("error", console.error.bind(console, "MongoDB connection error:"))
+
+app.listen(PORT, function() {
   console.log("Example app listening on port 3000!")
 })
