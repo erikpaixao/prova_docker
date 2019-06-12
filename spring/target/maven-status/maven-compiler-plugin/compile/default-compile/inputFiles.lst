@@ -1,1 +1,6 @@
-/home/erik/Documentos/prova/spring/src/main/java/hello/Application.java
+/home/erik/Documentos/prova/spring/src/main/java/paixao/erik/config/SwaggerConfig.java
+/home/erik/Documentos/prova/spring/src/main/java/paixao/erik/services/UsuarioService.java
+/home/erik/Documentos/prova/spring/src/main/java/paixao/erik/controllers/UsuarioController.java
+/home/erik/Documentos/prova/spring/src/main/java/paixao/erik/Application.java
+/home/erik/Documentos/prova/spring/src/main/java/paixao/erik/entitys/Usuario.java
+/home/erik/Documentos/prova/spring/src/main/java/paixao/erik/repositorys/UsuarioRepository.java
